@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage calculator</title>
+      <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans">
+    <link rel="stylesheet" href="mystyles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <main class="main">
+        <section class="section1">
+            <form>
+            <div class="container-fluid">
+                <h3 class="h3-text">Mortgage Calculator</h3>
+                <p class="p-text">Clear All</p>
+            </div>
+            <div class="container-input">
+            <label for="amount">Mortgage Amount </label>
+            <div class="input-group">
+                <div class="container-span">
+                <span id="euros" class="input-span">£</span>
+                </div>
+            <input type="number" tabindex="0" step="any" class="form-control" id="amount" name="amounts" value="">
+            </div>
+            <p id="amountError" class="paragrafError"></p>
+        </div>
+            <div class="container">
+                <div class="label-container">
+                <label id="yearLabel" for="years">Mortgage Term</label>
+                <label for="rate">Interest Rate</label>
+                </div>
+                <div class="input-container">
+                    <div class="input-group" id="year-group">
+                        <input type="number" id="years" name="MortgageTerm" value="">
+                        <div class="container-span">
+                        <span id="Years" class="input-span">years</span>
+                        </div>
+                    </div>
+                    <div id="procent-group" class="input-group">
+                <input type="number" step="any" id="rate" name="InterestRate" value="">
+                <div id="procent-container" class="container-span">
+                 <span id="procents" class="input-span">%</span>
+                </div>
+                </div>
+            </div>
+            <div class="paragraf-container">
+                <p class="paragrafError"></p>
+                <p class="paragrafError"></p>
+            </div>
+            </div>
+            <div class="container-mortgage">
+                <label>Mortgage Type</label>
+                <label class="box">
+                    <input type="radio" value="Repayment" id="repayment" name="mortgagetype">
+                    <span class="custom-radio"></span>
+                    Repayment
+                </label>
+                <label class="box">
+                    <input type="radio" value="Interests" id="Interests" name="mortgagetype">
+                    <span class="custom-radio"></span>
+                    Interest Only
+                </label>
+                <p class="paragrafError"></p>
+            </div>
+            <button type="submit">Calculate Repayments</button>
+            </form>
+        </section>
+        <section class="section2">
+            <div class="container-section">
+                <img src="assets/illustration-empty.svg" alt="Image with a pocket calculator">
+                <h3 class="text-primary">Results shown here</h3>
+                <p class="text-secondary">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
+            </div>
+        </section>
+        <section class="section2 alternate hidden">
+            <h3 class="heading-text">Your results</h3>
+            <p class="paragraph-text">Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.</p>
+        <div class="container-result">
+            <div class="repayments-result">
+                <h3>Your monthly repayments</h3>
+                <p class="result">1797.74</p>
+            </div>
+            <hr>
+            <div class="total-result">
+                <h3>Total you'll repay over the term</h3>
+                <p class="repay">539.322.94</p>
+            </div>
+        </div>
+        </section>
+    
+    </main>
+</body>
+</html>
